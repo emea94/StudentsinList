@@ -47,6 +47,6 @@ public class Pharmacy {
         medicationMap.values().forEach(System.out::println);
 
         // alternative Lösung mit Lambda - hier allerdings unnötig
-        // medicationMap.forEach((k, v) -> System.out.println(v));
+        //medicationMap.forEach((k, v) -> System.out.println(v));
     }
 }

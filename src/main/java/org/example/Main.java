@@ -107,6 +107,7 @@ public class Main {
 
         System.out.println();
         rosenApotheke.printFullMedicationInventory();
+        rosenApotheke.printFullMedicationInventory();
         System.out.println();
 
         System.out.println("Rückruf Aktion: Chamomilla wird entfernt," +

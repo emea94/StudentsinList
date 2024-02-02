@@ -14,7 +14,8 @@ public class School {
     }
 
     public void removeStudent(Student student) {
-        studentMap.remove(student.studentID);
+        if(student != null)
+            studentMap.remove(student.studentID);
     }
 
     public void printAllStudents() {
