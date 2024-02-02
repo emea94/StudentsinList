@@ -1,9 +1,14 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
     String firstName;
     String lastName;
     int studentID;
+
+    List<Course> courseList  = new ArrayList<>();
 
 
     public Student(String firstName, String lastName, int studentID) {
@@ -36,14 +41,18 @@ public class Student {
         this.studentID = studentID;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", studentID=" + studentID +
-                '}';
+    public void addCourse(Course course){
+        courseList.add(course);
     }
 
+    public void printAllCourses(){
+        courseList.forEach(System.out::println);
+    }
 
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + '\'' +
+                "(studentID=" + studentID +
+                ')';
+    }
 }

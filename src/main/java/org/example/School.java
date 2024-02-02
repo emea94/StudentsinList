@@ -1,5 +1,6 @@
 package org.example;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,15 @@ public class School {
 
     public void printAllStudents() {
         studentList.forEach(System.out::println);
+    }
+
+
+    public void getCoursesForStudent(Student student){
+        student.printAllCourses();
+    }
+    public void getCoursesForStudent(int studentID){
+        System.out.printf("Courses for %s \n", findStudent(studentID));
+        findStudent(studentID).printAllCourses();
     }
 
     public Student findStudent(int studentID) {
