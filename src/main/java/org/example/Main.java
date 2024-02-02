@@ -12,6 +12,14 @@ public class Main {
         studentList.add(new Student("Benjamin", "Blümchen", 789529));
 
 
-        studentList.forEach(System.out::println);
+        //studentList.forEach(System.out::println);
+
+        School school = new School();
+        school.addStudent(studentList.get(0));
+        school.addStudent(studentList.get(1));
+        school.addStudent(studentList.get(2));
+
+        school.printAllStudents();
+
     }
 }
