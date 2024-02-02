@@ -43,6 +43,7 @@ public class Main {
 
         System.out.println("Hardcoded Liste für Studenten");
         studentList.forEach(System.out::println);
+        System.out.println();
 
         // Schule instanzieren und Schüler übertragen
         School school = new School();
@@ -67,9 +68,12 @@ public class Main {
         System.out.println(school.findStudent(785080));
 
         System.out.println("removing a Student (twice)");
-        school.removeStudent(school.findStudent(785080));
+        // school.removeStudent(school.findStudent(785080));
+        school.removeStudent(785080);
         school.printAllStudents();
-        school.removeStudent(school.findStudent(785080));
+        // school.removeStudent(school.findStudent(785080));
+        school.removeStudent(785080);
+
         school.printAllStudents();
 
         System.out.println("\nExample for Student Courses");

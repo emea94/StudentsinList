@@ -2,23 +2,26 @@ package org.example;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class School {
 
-    List<Student> studentList = new ArrayList<>();
+    //List<Student> studentList = new ArrayList<>();
+    Map<Integer, Student> studentMap = new HashMap<>();
 
 
     public void addStudent(Student student) {
-        studentList.add(student);
+        studentMap.put(student.studentID, student);
     }
 
-    public void removeStudent(Student student) {
-        studentList.remove(student);
+    public void removeStudent(int studentID) {
+        studentMap.remove(studentID);
     }
 
     public void printAllStudents() {
-        studentList.forEach(System.out::println);
+        studentMap.values().forEach(System.out::println);
     }
 
 
@@ -31,13 +34,7 @@ public class School {
     }
 
     public Student findStudent(int studentID) {
-        for (Student student : studentList) {
-            if (student.studentID == studentID) {
-                return student;
-            }
-        }
-        System.out.println("Student nicht gefunden");
-        return null;
+        return studentMap.get(studentID);
     }
 
 }
