@@ -52,6 +52,9 @@ public class Main {
         school.printAllStudents();
 
         System.out.println("\nExample for Student Courses");
+        System.out.println("By Id:");
         school.getCoursesForStudent(189787);
+        System.out.println("By Student-object:");
+        school.getCoursesForStudent(gesuchterStudent);
     }
 }
