@@ -85,9 +85,9 @@ public class Main {
         Medication aspirin = new Medication("Aspirin", "9,99€", 20);
         Medication chamomilla = new Medication("Chamomilla", "7,99€", 200);
         Medication ibuprofen = new Medication("Ibuprofen", "9,99€", 15);
-        Medication naproxen  = new Medication("Naproxen ", "14,99€", 20);
-        Medication acetaminophen   = new Medication("Acetaminophen  ", "4,99€", 10);
-        Medication celebrex   = new Medication("Celebrex  ", "45,99€", 3);
+        Medication naproxen = new Medication("Naproxen", "14,99€", 20);
+        Medication acetaminophen = new Medication("Acetaminophen", "4,99€", 10);
+        Medication celebrex = new Medication("Celebrex", "45,99€", 3);
 
 
         // PHARMACYs
