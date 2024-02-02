@@ -13,8 +13,8 @@ public class School {
         studentMap.put(student.studentID, student);
     }
 
-    public void removeStudent(int studentID) {
-        studentMap.remove(studentID);
+    public void removeStudent(Student student) {
+        studentMap.remove(student.studentID);
     }
 
     public void printAllStudents() {
