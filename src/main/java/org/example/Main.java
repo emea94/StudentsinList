@@ -83,22 +83,35 @@ public class Main {
         // Medications
 
         Medication aspirin = new Medication("Aspirin", "9,99€", 20);
+        Medication chamomilla = new Medication("Chamomilla", "7,99€", 200);
         Medication ibuprofen = new Medication("Ibuprofen", "9,99€", 15);
         Medication naproxen  = new Medication("Naproxen ", "14,99€", 20);
         Medication acetaminophen   = new Medication("Acetaminophen  ", "4,99€", 10);
         Medication celebrex   = new Medication("Celebrex  ", "45,99€", 3);
 
+
         // PHARMACYs
         Pharmacy rosenApotheke = new Pharmacy();
         rosenApotheke.saveMedication(aspirin);
         rosenApotheke.saveMedication(ibuprofen);
+        rosenApotheke.saveMedication(chamomilla);
         rosenApotheke.saveMedication(naproxen);
         rosenApotheke.saveMedication(acetaminophen);
         rosenApotheke.saveMedication(celebrex);
 
+
         System.out.println(rosenApotheke.getMedicationCount());
+        System.out.println("\nBeispiele Namensausgabe über findMedication (Aspirin vs Arsepirin)");
         System.out.println(rosenApotheke.findMedication("Aspirin"));
         System.out.println(rosenApotheke.findMedication("Arsepirin"));
+
+        System.out.println();
+        rosenApotheke.printFullMedicationInventory();
+        System.out.println();
+
+        System.out.println("Rückruf Aktion: Chamomilla wird entfernt," +
+                "\nweil Homöopathie wirkt nicht über den Placebo-Effekt hinaus\n");
+        rosenApotheke.deleteMedication("Chamomilla");
 
         rosenApotheke.printFullMedicationInventory();
     }

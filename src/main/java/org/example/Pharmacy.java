@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Pharmacy {
-    Map<String, Medication> medicationMap = new HashMap<>();
+    private Map<String, Medication> medicationMap = new HashMap<>();
 
     public int getMedicationCount(){
         // Step 3: Create a method 'int getCount()' in the class Pharmacy.
