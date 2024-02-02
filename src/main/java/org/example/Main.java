@@ -38,17 +38,20 @@ public class Main {
 
         System.out.println();
 
+        // Added courses for Student Karla
         gesuchterStudent = school.findStudent(189787);
         gesuchterStudent.addCourse(new Course("Art", "Herr Strubinski", "A113"));
         gesuchterStudent.addCourse(new Course("Sports", "Lady Luck", "the Gym"));
 
         System.out.println(school.findStudent(785080));
 
+        System.out.println("removing a Student (twice)");
+        school.removeStudent(school.findStudent(785080));
+        school.printAllStudents();
         school.removeStudent(school.findStudent(785080));
         school.printAllStudents();
 
-        school.removeStudent(school.findStudent(785080));
-
+        System.out.println("\nExample for Student Courses");
         school.getCoursesForStudent(189787);
     }
 }
