@@ -12,8 +12,22 @@ public class School {
         studentList.add(student);
     }
 
+    public void removeStudent(Student student) {
+        studentList.remove(student);
+    }
+
     public void printAllStudents() {
         studentList.forEach(System.out::println);
+    }
+
+    public Student findStudent(int studentID) {
+        for (Student student : studentList) {
+            if (student.studentID == studentID) {
+                return student;
+            }
+        }
+        System.out.println("Student nicht gefunden");
+        return null;
     }
 
 }

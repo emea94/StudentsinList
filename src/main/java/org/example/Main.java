@@ -10,6 +10,7 @@ public class Main {
         studentList.add(new Student("Karl", "Käfer", 785080));
         studentList.add(new Student("Karla", "Kolumna", 189787));
         studentList.add(new Student("Benjamin", "Blümchen", 789529));
+        studentList.add(new Student("Ben", "Blümchen", 789528));
 
 
         //studentList.forEach(System.out::println);
@@ -19,7 +20,16 @@ public class Main {
         school.addStudent(studentList.get(1));
         school.addStudent(studentList.get(2));
 
+        //school.printAllStudents();
+        Student gesuchterStudent = school.findStudent(789528);
+        System.out.println(gesuchterStudent);
+
+        //System.out.println(school.findStudent(785080));
+
+        school.removeStudent(school.findStudent(785080));
         school.printAllStudents();
+
+        school.removeStudent(school.findStudent(785080));
 
     }
 }
